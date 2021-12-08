@@ -2,9 +2,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-u_int32_t mult_test( u_int32_t a, u_int32_t b){
-	return (u_int32_t) ((( (u_int64_t) a ) * b ) % mod );
-}
 
 void mult_tab_constant_double(double C,u_int32_t *tab,u_int64_t taille,u_int32_t *dest){
 	for (u_int64_t i=0;i<taille;i++){
