@@ -7,23 +7,24 @@
 
 //#define N 0x0100000000
 #define N 1
-#define mod 100000
-
-#define add_n(a,b)    ((u_int32_t) ((( (u_int64_t) a ) +b ) % mod ) )
-#define sous_n(a,b)   ((u_int32_t) ((( (u_int64_t) a ) -b ) % mod ) )
-#define multi_n(a,b)  ((u_int32_t) ((( (u_int64_t) a ) * b) % mod ) )
+#define mod 7789
+#define add_n(a,b)    ((u_int32_t) ((( (u_int64_t) ((a)%mod)+mod ) + (((b)%mod)+mod)) % mod ) )
+#define sous_n(a,b)   ((u_int32_t) (((( (u_int64_t) ((a)%mod)+mod ) - (((b)%mod)+mod)) +mod) % mod ) )
+#define multi_n(a,b)  ((u_int32_t) ((( (u_int64_t) ((a)%mod)+mod ) * (((b)%mod)+mod)) % mod ) )
+#define multi_n_c(a,b)  ((u_int32_t) ((( (u_int64_t) ((a)%mod)+mod ) * (((b)%mod)+mod)) % mod ) )
 
 #define min(a,b) (a<b?a:b)
 #define max(a,b) (a>b?a:b)
 
 void add_tab(u_int32_t *tab_res ,u_int32_t *tab1,u_int32_t *tab2,u_int64_t taille);
 void sous_tab(u_int32_t *tab_res ,u_int32_t *tab1,u_int32_t *tab2,u_int64_t taille);
+u_int32_t extendedEuclid(int b);
 
-u_int32_t *mult_poly_naif(u_int32_t *res,u_int32_t *tab1,u_int32_t *tab2,u_int64_t taille);
+void mult_tab_constant_double(double C,u_int32_t *tab,u_int64_t taille,u_int32_t *dest);
+void mult_tab_constant(int32_t C,u_int32_t *tab,u_int64_t taille,u_int32_t *dest);
+void add_mult_tab_constant(int32_t C,u_int32_t *tab,u_int64_t taille,u_int32_t *dest);
 
-void mult_poly_karasuba(u_int32_t *a,u_int64_t taille_a,u_int32_t *b,u_int64_t taille_b,u_int32_t **res,u_int64_t *taille_res );
-
-void mult_poly_TC(u_int32_t *a,u_int64_t taille_a,u_int32_t *b,u_int64_t taille_b,u_int32_t **res,u_int64_t *taille_res );
+u_int32_t extendedEuclid(int b);
 
 
 #endif
