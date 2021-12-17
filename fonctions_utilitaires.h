@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+#include <time.h>
 //#define N 0x0100000000
 #define N 1
 #define mod 7789
@@ -25,6 +25,6 @@ void mult_tab_constant(int32_t C,u_int32_t *tab,u_int64_t taille,u_int32_t *dest
 void add_mult_tab_constant(int32_t C,u_int32_t *tab,u_int64_t taille,u_int32_t *dest);
 
 u_int32_t extendedEuclid(int b);
-
+u_int32_t* genere_polynome(u_int64_t d);
 
 #endif
