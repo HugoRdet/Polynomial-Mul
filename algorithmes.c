@@ -32,7 +32,6 @@ void karasuba_mult_poly_rec(u_int32_t *res,u_int32_t *A,u_int32_t *B,u_int64_t t
 	u_int32_t *T0=(u_int32_t *) calloc(taille,sizeof(u_int32_t));
 	add_tab(T0,A,A+p,p);
 	
-	
 	u_int32_t *T1=(u_int32_t *) calloc(taille,sizeof(u_int32_t));
 	add_tab(T1,B,B+p,p);
 	
@@ -100,7 +99,7 @@ void mult_poly_karasuba(u_int32_t *a,u_int64_t taille_a,u_int32_t *b,u_int64_t t
 	u_int64_t tmp_taille=2;
 	u_int64_t max_taille=max(taille_a,taille_b);
 	
-	while (max_taille>=tmp_taille) {
+	while (max_taille>tmp_taille) {
 		tmp_taille*=2;
 	}
 	
@@ -545,7 +544,7 @@ void mult_TC3(u_int32_t *a,u_int64_t taille_a,u_int32_t *b,u_int64_t taille_b,u_
 	u_int64_t tmp_taille=3;
 	u_int64_t max_taille=max(taille_a,taille_b);
 	
-	while (max_taille>=tmp_taille) {
+	while (max_taille>tmp_taille) {
 		tmp_taille*=3;
 	}
 	

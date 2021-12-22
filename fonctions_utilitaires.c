@@ -67,7 +67,7 @@ u_int32_t extendedEuclid(int b){
 u_int32_t* genere_polynome(u_int64_t d){
 	u_int32_t *res=(u_int32_t * ) malloc(sizeof(u_int32_t)*d);
 	for (u_int64_t i=0;i<d;i++){
-		res[i]=(u_int32_t) (rand() %10);
+		res[i]=(u_int32_t) (rand() %mod);
 		
 	}
 	return res;
