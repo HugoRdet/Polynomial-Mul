@@ -318,7 +318,7 @@ void mult_poly_TC3(u_int32_t *res,u_int32_t *A,u_int32_t *B,u_int64_t taille){
 
 void mult_poly_TC4(u_int32_t *res,u_int32_t *A,u_int32_t *B,u_int64_t taille){
 	
-	if (taille<=11){
+	if (taille<=1){
 		mult_poly_naif(res,A,B,taille);
 		return;
 	}

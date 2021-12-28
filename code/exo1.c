@@ -17,7 +17,7 @@ int main(int argc,char **argv){
     int max=atoi(argv[2]);
     int pas=atoi(argv[3]);
     int essais=atoi(argv[4]);
-    test_algo(max,pas,essais);
+    test_algos_TCK(max,pas,essais);
   }
   
   
